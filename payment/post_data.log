@@ -1,0 +1,7 @@
+Array
+(
+    [order_id] => 170418762759247
+    [error_code] => BAD_REQUEST
+    [error_description] => Not good test, but better.
+    [status] => failed
+)

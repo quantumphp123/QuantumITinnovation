@@ -1,0 +1,24 @@
+[13-Oct-2023 18:31:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/tr74dvr2bn8f/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/tr74dvr2bn8f/public_html/config/cache.php on line 21
+[16-Oct-2023 02:27:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/tr74dvr2bn8f/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/tr74dvr2bn8f/public_html/config/cache.php on line 21
+[17-Oct-2023 11:42:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/tr74dvr2bn8f/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/tr74dvr2bn8f/public_html/config/cache.php on line 21
+[18-Oct-2023 06:59:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/tr74dvr2bn8f/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/tr74dvr2bn8f/public_html/config/cache.php on line 21
+[18-Oct-2023 07:01:25 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/tr74dvr2bn8f/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/tr74dvr2bn8f/public_html/config/cache.php on line 21
+[22-Oct-2023 15:41:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/tr74dvr2bn8f/public_html/config/cache.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/tr74dvr2bn8f/public_html/config/cache.php on line 21

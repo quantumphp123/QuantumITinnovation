@@ -1,0 +1,62 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+    
+    RewriteCond %{HTTP_HOST} !^quantumitinnovation\.com$ [NC]
+    RewriteRule ^(.*)$ https://quantumitinnovation.com/$1 [R=301,L]
+    
+    # <Files sitemap.xml>
+    #     Order deny,allow
+    #     Deny from all
+    # </Files>
+    
+    # Deny access to hidden files and directories
+    # (files/directories starting with a dot)
+    <IfModule mod_rewrite.c>
+        RewriteCond %{SCRIPT_FILENAME} -d [OR]
+        RewriteCond %{SCRIPT_FILENAME} -f
+        RewriteRule "(^|/)\." - [F]
+    </IfModule>
+    
+    # Deny access to files with extensions .ini, .psd, .log, .sh
+    <FilesMatch "\.(json|lock|phar)$">
+        Order allow,deny
+        Deny from all
+    </FilesMatch>
+    
+    # Protect the .htaccess file itself
+    <Files .htaccess>
+        Order Allow,Deny
+        Deny from all
+    </Files>
+    
+    # Protect against common attack methods
+    <IfModule mod_headers.c>
+        Header set X-XSS-Protection "1; mode=block"
+        Header set X-Content-Type-Options "nosniff"
+        Header always append X-Frame-Options SAMEORIGIN
+    </IfModule>
+
+    # Prevent access to sensitive system files
+    <FilesMatch "^(.git|composer\.json|composer\.lock|config\.php|php\.ini|\.env)">
+        Order Allow,Deny
+        Deny from all
+    </FilesMatch>
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

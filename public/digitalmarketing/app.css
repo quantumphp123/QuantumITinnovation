@@ -1,0 +1,345 @@
+@font-face {
+  font-family: Cerebri;
+  src: url(./font/Cerebri\ Sans\ Regular.ttf);
+}
+
+body {
+  font-size: 14px !important;
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: Cerebri;
+}
+
+.testomonials::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+.carousel-inner::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.dropdown-menu .row::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(131, 131, 131);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(48, 48, 48);
+  border-radius: 10px;
+}
+
+/* -----------------navbar------------------ */
+
+.form-control:focus {
+  border-color: #086ad8;
+  box-shadow: none;
+  outline: none;
+}
+
+.contact {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background-color: #c3dcf888;
+  line-height: 48px;
+  color: #086ad8;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+.contact:hover {
+  background-color: #086ad8;
+  color: white;
+}
+
+.navbar.active {
+  animation: fadeNav 0.7s linear forwards;
+  background: white !important;
+  box-shadow: 0 8px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.navbar {
+  transition: all 0.5s;
+  opacity: 1;
+  animation: fadeNavOut 0.9s linear forwards;
+}
+
+@keyframes fadeNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeNavOut {
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.active.navbar .nav-link {
+  font-weight: 500;
+  color: black;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* .nav-link {
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 16px;
+} */
+.navbar-nav .active {
+  color: #086ad8 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #086ad8 !important;
+  z-index: 1 !important;
+  font-weight: 500;
+}
+
+.NavDropdown {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.all {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#banner {
+  background: url("./Images/bg2.webp") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  background-position-y: -16vh;
+  width: 100%;
+  height: 80vh;
+  z-index: -1;
+}
+
+@media (max-width: 850px) {
+  #banner {
+    background-size: 100% 50vh;
+    height: 50vh;
+    background-position-y: top;
+  }
+
+  .bannerHeading {
+    height: 50vh !important;
+  }
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+  animation: fadeIn 0.4s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+}
+
+.dropdown-menu {
+  opacity: 1;
+  background-color: transparent !important;
+  top: 60%;
+  left: 0;
+}
+
+.centertag a {
+  cursor: pointer;
+  color: white !important;
+}
+
+.centertag a:hover {
+  cursor: pointer;
+  color: #086ad8 !important;
+}
+
+.dropdownHover li:hover {
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+  background-color: #086ad8;
+}
+
+/* -----------------Footer------------------ */
+#footer {
+  background: url("./Images/footerbg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.socialicons .fa:hover {
+  transition: 0.5s;
+  background: #086ad8 !important;
+  color: white !important;
+  cursor: pointer;
+  border-color: #086ad8 !important;
+}
+
+.slider button {
+  border: none !important;
+  padding: 1.8px !important;
+  background-color: #eee;
+  outline: none !important;
+  width: 50px !important;
+  margin: 5px !important;
+}
+
+[type="button"].active {
+  background-color: black;
+}
+
+.serviceAreas:hover {
+  cursor: pointer;
+  color: #086ad8;
+}
+
+.backtotop {
+  position: fixed;
+  float: right;
+  z-index: 999;
+  bottom: 5%;
+}
+
+.back.active {
+  display: block;
+}
+
+.hello {
+  height: 35px;
+  width: 50px;
+  border-radius: 5px 5px 0px 0px;
+  line-height: 40px;
+  background-color: #086ad8;
+  transition: 0.3s;
+}
+
+.hello:hover {
+  background-color: #0869d8b8 !important;
+}
+
+/* --------------------Home------------------- */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #086ad8;
+  border-radius: 50%;
+  padding: 17px;
+}
+
+.carousel-item {
+  height: 100%;
+  font-size: 1.1rem;
+}
+
+.react-multi-carousel-dot--active button {
+  background: rgb(161, 161, 161) !important;
+  border: none !important;
+}
+
+.react-multi-carousel-dot button {
+  border: none !important;
+  background-color: rgb(224, 222, 222);
+}
+
+table {
+  width: 100%;
+  font-weight: lighter;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #0869d81b;
+}
+
+.startbtn .rounded-pill {
+  background-color: #086ad8;
+  transition: 0.3s;
+}
+
+.startbtn .rounded-pill:hover {
+  background-color: #0a6fe3a6;
+}
+
+.btnPricing.rounded-pill:hover {
+  background-color: #086ad8 !important;
+  color: white !important;
+  transition: 0.5s;
+}
+
+/* --------------------------------------------- */
+@media (max-width: 990px) {
+  .hrtag {
+    display: none !important;
+  }
+
+  .active.navbar a {
+    color: white !important;
+  }
+
+  .Qlogo {
+    width: 100px !important;
+    height: 50px !important;
+  }
+}
+
+@media (min-width: 990px) {
+  .NavDropdown {
+    background: none;
+  }
+
+  .navbarinline {
+    display: flex;
+  }
+}
+
+/* @media (min-width: 150px) {
+  .nav-link {
+    color: black !important;
+  }
+} */
